@@ -11,8 +11,8 @@ app = FastAPI()
 # AWS credentials (use environment variables or IAM role in production)
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
-AWS_REGION = "ap-south-1"  # change as needed
-S3_BUCKET = "shashwatbucketunique"  # change to your bucket
+AWS_REGION = os.getenv("AWS_REGION")
+S3_BUCKET = os.getenv("S3_BUCKET")
 
 s3_client = boto3.client(
     "s3",
