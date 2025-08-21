@@ -23,9 +23,9 @@ Note: The instance also has `python3` and `docker` installed.
 
 -------------
 ### Task 4: Write a REST API (using python3) to upload file to S3
-
-1. I have created a simple FastAPI application which takes any file as user input.
-2. Then I have configured an IAM user with policy to be able to put files in the s3 bucket.
+<h4>Write a REST API (using python3) to upload file to S3</h4>
+1. I have created a simple FastAPI application which takes any file as user input.<br>
+2. Then I have configured an IAM user with policy to be able to put files in the s3 bucket.<br>
 3. The uploaded file on FastAPI page gets uploaded in the S3 bucket.
 
 
