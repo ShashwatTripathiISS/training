@@ -251,3 +251,267 @@ FINAL OUTPUT:
 <br>
 
 
+
+
+
+
+1. aws ecr get-login-password --region ap-south-1
+
+eyJwYXlsb2FkIjoiaGwyUFVxbWxhNTROdzA0Rk9XYTUzbjFWbmFrSlVyWlE3c1NBaVprMVVYY2VZUWZiWExFSHA4VFN1SytBMWdVZ3FncVJtMlh2NXJzcmhWR1IxNmFWblFWczdlYW9tUHNyL2JpSVZQcU1pUUFqTC9WTlFTdVJZRkNpSE5uOU1BQTJZNjdOdHJaeGU5N2V6RlZlVUd3MWhYaTN3YXFjakw5UEVkajNVYlcyNEszWmNnV3JmdE5XdXJkRy9JdWs5UGZpNmpPV0Y3SGZPejdBNWN0TnJRVTlwaFNtOHp4VlZHaWVpZFVYdzRiK056c2MwN3FTYlE3cWV0YThjWElUZWdwSzlqQW9KQXV3aGlGckowUU1YeGc2NzZTa3J4b0NaK2xseGs4MVU3WHJ0SHJFM1Q4N0RVa0NFUDNOOEFCRFRPcXVkTDFFaFhtUUNNTC9jeFdIRE1ValpVZW9BWjJyLzhERzY5SGRyL3NvY1hrUnFsRXhmU2FRd1NyRU1XZzk5UUNOcTNpZVFTZFIyRVI4YlNFUml6MlVjd2tKcGdPZ2s2RGlGOXA4OG1rVzN5ekNsSzlYaGNiOFJVMHIzVVQ1Rm5vOUtGUTAzdmZheHhMc08wT3czYXpIcnluZjRnVEptVElTdTJNanZUS3ZZdXhUQnJTNVByZnN4Wi9NRFc4clNRdS8zaHpjWGxqM2poWnRVTnpMeENJNm9Yb2pPVkVCNnJ3QkMyMlRSWVhKWE1wZ3ZuV2xLc09DQm13M1laRWhidmEraThtZ0orbDJCdkd5aXBxZnY5MGJNbG9ISmRtTVZyNldUZER6blJYVzRTM2k1aGVnUFFEaHBCQmxScVhPK3R2UGxGb216OFk0bzRxckYvV1lCbHJ5T3YyeUhLSi9RYkw5WmFCYytpNnpLWVNERHNVT1BTcmUzVkNiZXRxVjJRdU5HOWFDZUI4SUNKcUNYeUNhUnA0ZEtVRnY0TXUyU1ZRRkwvcXRiMTR4V1l5aEVtMzRralJ1Q09XVVowNHlBdXhBL3JGaThpbXJNSUVzMFpuNjRDaDZVb1R0UWlGaG14OXk2Q0V2em8zL3dKejNyS05KR0NXVUtoc3FWbXNmWVd6TSsrcllxRytpN0xKbEV4T2VCUkNXYnBNcVZsZzJ5NU03bDBtK3VtUC9vcHNRc0V4OU14TWs5Ni9sblhqa1dCQUxDOWN6UHJsVTF4VHFNOCtEQ09PSVpiQUtjRk94Vy9BV09Qb1JwWmZ3OGh4MVpYc1o3M2FTSGFBV3h5b3k2VWdnNEhBN0NOTGFPaWJZQWtpbEFSS0xaWlNaRDJrc1RKWHAvZDJBei93aS9EejVhNmpRc0NaVU5rcnBMVStRMDZ2RlExc3J5bDZzc25RdGZ5dGNScXc4dGtQOTV2WHZTTXh5QjBXdWpZdVhmUWRZcGFPUXV3QjY3UE1HbTBwSzNDSjgxV0xndkVtU08yZkNLNHR0dzdSQ1FNcWhybHFjdmFRZTB2V3FnWTZDZ0hVMGxZU2dhMENiY1k3OEdrNHhFTFpNa3k2ODZtRVlmWTlJQWNjcjBrV1dCR0lzZll2MlJrT215WHE5RmcyaGtjbmEiLCJkYXRha2V5IjoiQVFJQkFIaUhXYVlUblJVV0NibnorN0x2TUcrQVB2VEh6SGxCVVE5RnFFbVYyNkJkd3dGdXkySExnNElueEYwRzIzK2h6MkZiQUFBQWZqQjhCZ2txaGtpRzl3MEJCd2FnYnpCdEFnRUFNR2dHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNWkIyOG1Hbk9mcGJVMGVSVEFnRVFnRHZlOEQ1ck9FRnFNSmc2bFA4UWhGS1Z4SG1RZlNtdUxTaWEyRWJzN1UzMCtKZmhFMmpPdmpDL05UVE1CODI0UlRRd0dmMSs1b2liQXQzRzV3PT0iLCJ2ZXJzaW9uIjoiMiIsInR5cGUiOiJEQVRBX0tFWSIsImV4cGlyYXRpb24iOjE3NTYyNTA0MTF9
+
+2. aws configure
+
+3. aws ecr get-login-password --region ap-south-1 | sudo docker login --username AWS --password-stdin 756107513788.dkr.ecr.ap-south-1.amazonaws.com
+
+4. aws ecr create-repository --repository-name lambda-processing-repo
+
+5. sudo docker tag lambda-processing:latest 756107513788.dkr.ecr.ap-south-1.amazonaws.com/lambda-processing-repo:latest
+
+6. sudo docker push 756107513788.dkr.ecr.ap-south-1.amazonaws.com/lambda-processing-repo:latest
+
+
+
+
+
+
+aws ecs register-task-definition --cli-input-json file://task-definition.json
+
+output of task definition:
+
+{
+    "taskDefinition": {
+        "taskDefinitionArn": "arn:aws:ecs:ap-south-1:756107513788:task-definition/lambda-processing-task:1",
+        "containerDefinitions": [
+            {
+                "name": "lambda-processing-container",
+                "image": "756107513788.dkr.ecr.ap-south-1.amazonaws.com/lambda-processing-repo:latest",
+                "cpu": 0,
+                "portMappings": [
+                    {
+                        "containerPort": 80,
+                        "hostPort": 80,
+                        "protocol": "tcp"
+                    }
+                ],
+                "essential": true,
+                "environment": [
+                    {
+                        "name": "S3_BUCKET",
+                        "value": "shashwatbucketunique"
+                    }
+                ],
+                "mountPoints": [],
+                "volumesFrom": [],
+                "systemControls": []
+            }
+        ],
+        "family": "lambda-processing-task",
+        "executionRoleArn": "arn:aws:iam::756107513788:role/ecsTaskExecutionRole",
+        "networkMode": "awsvpc",
+        "revision": 1,
+        "volumes": [],
+        "status": "ACTIVE",
+        "requiresAttributes": [
+            {
+                "name": "com.amazonaws.ecs.capability.ecr-auth"
+            },
+            {
+                "name": "ecs.capability.execution-role-ecr-pull"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+            },
+            {
+                "name": "ecs.capability.task-eni"
+            }
+        ],
+        "placementConstraints": [],
+        "compatibilities": [
+            "EC2",
+            "FARGATE"
+        ],
+        "requiresCompatibilities": [
+            "FARGATE"
+        ],
+        "cpu": "256",
+        "memory": "512",
+        "registeredAt": 1756364784.478,
+        "registeredBy": "arn:aws:iam::756107513788:user/shashwat"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "StartAt": "Run ECS Task",
+  "States": {
+    "Run ECS Task": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::ecs:runTask.sync",
+      "Parameters": {
+        "Cluster": "arn:aws:ecs:ap-south-1:756107513788:cluster/piyush-fluffy-gecko-jsk256",
+        "TaskDefinition": "arn:aws:ecs:ap-south-1:756107513788:task-definition/piyush-process-csv-task:2",
+        "LaunchType": "FARGATE",
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "Subnets": [
+              "subnet-0146283ce10ab58a8"
+            ],
+            "AssignPublicIp": "ENABLED",
+            "SecurityGroups": [
+              "sg-0f43bfee7516e0eca"
+            ]
+          }
+        },
+        "Overrides": {
+          "ContainerOverrides": [
+            {
+              "Name": "piyush-process-csv-container",
+              "Environment": [
+                {
+                  "Name": "S3_BUCKET",
+                  "Value.$": "$.bucket"
+                },
+                {
+                  "Name": "S3_KEY",
+                  "Value.$": "$.key"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "Next": "Check ECS Status"
+    },
+    "Check ECS Status": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.Failures",
+          "IsPresent": false,
+          "Next": "Notify Success"
+        }
+      ],
+      "Default": "Notify Failure"
+    },
+    "Notify Success": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "TopicArn": "arn:aws:sns:ap-south-1:756107513788:piyush-process-csv-pass",
+        "Message": "ECS task completed successfully."
+      },
+      "End": true
+    },
+    "Notify Failure": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::sns:publish",
+      "Parameters": {
+        "TopicArn": "arn:aws:sns:ap-south-1:756107513788:piyush-process-csv-fail",
+        "Message": "ECS task failed."
+      },
+      "End": true
+    }
+  }
+}
+
+
+
+
+// Final code for shashwat
+
+
+{
+  "StartAt": "Run ECS Task",
+  "States": {
+    "Run ECS Task": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::ecs:runTask.sync",
+      "Parameters": {
+        "Cluster": "arn:aws:ecs:ap-south-1:756107513788:cluster/comfortable-zebra-gpghss",
+        "TaskDefinition": "arn:aws:ecs:ap-south-1:756107513788:task-definition/lambda-processing-task",
+        "LaunchType": "FARGATE",
+        "NetworkConfiguration": {
+          "AwsvpcConfiguration": {
+            "Subnets": [
+              "subnet-0824399d22343dd1c"
+            ],
+            "AssignPublicIp": "ENABLED",
+            "SecurityGroups": [
+              "sg-0f43bfee7516e0eca"
+            ]
+          }
+        },
+        "Overrides": {
+          "ContainerOverrides": [
+            {
+              "Name": "lambda-processing-container",
+              "Environment": [
+                {
+                  "Name": "S3_BUCKET",
+                  "Value": "shashwatbucketunique"
+                },
+                {
+                  "Name": "INPUT_KEY",
+                  "Value.$": "$.key"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "Next": "Check ECS Status"
+    },
+    "Check ECS Status": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.Failures",
+          "IsPresent": false,
+          "Next": "Notify Success Lambda"
+        }
+      ],
+      "Default": "Notify Failure Lambda"
+    },
+    "Notify Success Lambda": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "NotifySuccessLambda",
+        "Payload": {
+          "Status": "SUCCESS",
+          "bucket.$": "$.bucket",
+          "key.$": "$.key",
+          "ECSResult.$": "$"
+        }
+      },
+      "End": true
+    },
+    "Notify Failure Lambda": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "NotifyFailureLambda",
+        "Payload": {
+          "Status": "FAILURE",
+          "bucket.$": "$.bucket",
+          "key.$": "$.key",
+          "ECSResult.$": "$"
+        }
+      },
+      "End": true
+    }
+  }
+}
