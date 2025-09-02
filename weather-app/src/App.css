@@ -13,9 +13,8 @@ body {
 }
 
 .input {
+  width: 500px;
   padding: 10px;
-  width: 80%;
-  margin: auto;
   border: 2px solid #61dafb;
   border-radius: 6px;
   font-size: 16px;
@@ -79,4 +78,85 @@ body {
   text-align: center;
   color: #333;
   margin-top: 40px;
+}
+
+.get-weather-btn {
+  width: 250px;
+  padding: 10px;
+  background: #61dafb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.get-weather-btn:hover {
+  background: #21a1f3;
+}
+
+.dropdowns-container {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.unit-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  gap: 12px;
+}
+
+.unit-toggle-label {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.unit-switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 28px;
+}
+
+.unit-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.unit-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #e0e0e0;
+  border-radius: 28px;
+  transition: background 0.4s;
+  border: 2px solid #61dafb;
+}
+
+.unit-switch input:checked + .unit-slider {
+  background-color: #21a1f3;
+}
+
+.unit-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  top: 2px;
+  background-color: #61dafb;
+  transition: .2s;
+  border-radius: 50%;
+}
+
+.unit-switch input:checked + .unit-slider:before {
+  transform: translateX(26px);
+  background-color: #fff;
 }

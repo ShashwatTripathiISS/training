@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Changes done
+3 dropdowns
+Country
+State
+City
+
+take the cities depending on answers from previous dropdowns
+
 ## Available Scripts
 
 In the project directory, you can run:
